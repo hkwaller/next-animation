@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="19px" viewBox="0 0 14 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrows</title>
+    <g id="arrows" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <polyline id="Path" stroke="#FFFFFF" stroke-width="2" points="6.27272727 3.81640625 12.9090909 1.45276989 12.9090909 8.2709517"></polyline>
+        <polyline id="Path" stroke="#FFFFFF" stroke-width="2" transform="translate(4.590909, 13.861861) rotate(-179.000000) translate(-4.590909, -13.861861) " points="1.27272727 12.8164062 7.90909091 10.4527699 7.90909091 17.2709517"></polyline>
+    </g>
+</svg>
