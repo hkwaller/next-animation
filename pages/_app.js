@@ -1,18 +1,11 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimateSharedLayout } from "framer-motion";
 import "../styles/globals.css";
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps }) {
   return (
-    <AnimatePresence exitBeforeEnter>
-      <motion.div
-        initial="pageInitial"
-        animate="pageAnimate"
-        exit="pageExit"
-        key={router.route}
-      >
-        <Component {...pageProps} />
-      </motion.div>
-    </AnimatePresence>
+    <AnimateSharedLayout type="crossfade">
+      <Component {...pageProps} />
+    </AnimateSharedLayout>
   );
 }
 

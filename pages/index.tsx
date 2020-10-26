@@ -1,7 +1,7 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   const router = useRouter();
@@ -24,12 +24,11 @@ export default function Home() {
           src="/tokyo.jpeg"
           alt="Tokyo"
           className={styles.image}
-          width="70%"
         />
         <div className={styles.description}>
           Danish fontina cheesy feet manchego. Chalk and cheese say cheese
           cauliflower cheese melted cheese fromage halloumi lancashire who moved
-          my cheese.{" "}
+          my cheese.
         </div>
         <button
           onClick={() => router.push("/details")}

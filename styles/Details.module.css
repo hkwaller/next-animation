@@ -18,29 +18,34 @@
 .bottom {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
+  width: 100vw;
   z-index: 100;
   padding: 1em;
-  width: 100vw;
-  margin-bottom: 2em;
+  padding: 3em;
 }
 
-.image {
-  width: 100vw;
-}
-
-.s {
+.backgroundImage {
   background: url("/tokyo.jpeg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.detailsHeader {
+  color: white;
+  font-size: 3.5em;
+  margin: 0;
+  line-height: 1em;
+}
+
+.comments {
+  display: flex;
+  color: white;
 }
 
 .backButton {
