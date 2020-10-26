@@ -1,6 +1,6 @@
 import Head from "next/head";
-import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 import styles from "../styles/Details.module.css";
 
 export default function Details() {
@@ -14,68 +14,57 @@ export default function Details() {
       </Head>
 
       <main className={styles.main}>
-        <motion.div
-          className={styles.s}
-          initial="pageInitial"
+        <motion.div className={styles.backgroundImage} layoutId="pic" />
+        <motion.button
+          className={styles.backButton}
+          onClick={() => router.back()}
           animate="pageAnimate"
-          exit="pageExit"
+          initial="pageInitial"
           variants={{
             pageInitial: {
-              scale: 0.5,
+              translateX: -40,
             },
             pageAnimate: {
-              scale: 1,
-            },
-            pageExit: {
-              scale: 0.7,
+              translateX: 0,
             },
           }}
-        />
-        <button className={styles.backButton} onClick={() => router.back()}>
+        >
           X
-        </button>
+        </motion.button>
         <div className={styles.bottom}>
           <div>
             <motion.h1
-              initial="pageInitial"
+              className={styles.detailsHeader}
               animate="pageAnimate"
               variants={{
-                pageInitial: {
-                  translateY: 20,
-                },
                 pageAnimate: {
-                  translateY: 0,
+                  translateY: [40, -10, 0],
                 },
               }}
-              style={{ color: "white" }}
             >
               Lost in Tokyo
             </motion.h1>
 
             <motion.div
-              initial="pageInitial"
               animate="pageAnimate"
               variants={{
-                pageInitial: {
-                  translateY: 10,
-                  opacity: 0,
-                },
                 pageAnimate: {
-                  translateY: 0,
-                  opacity: 1,
+                  translateY: [20, 0],
+                  opacity: [0, 1],
                 },
               }}
-              style={{ color: "white" }}
+              style={{ color: "white", marginTop: "1em" }}
             >
               By Jonathan Vik
             </motion.div>
           </div>
           <motion.div
+            className={styles.comments}
             initial="pageInitial"
             animate="pageAnimate"
             variants={{
               pageInitial: {
-                translateX: -20,
+                translateX: -50,
                 opacity: 0,
               },
               pageAnimate: {
@@ -83,9 +72,13 @@ export default function Details() {
                 opacity: 1,
               },
             }}
-            style={{ color: "white" }}
           >
-            8 œ
+            8
+            <img
+              src="/comment.svg"
+              alt="comments"
+              style={{ marginLeft: "0.5em" }}
+            />
           </motion.div>
         </div>
       </main>
